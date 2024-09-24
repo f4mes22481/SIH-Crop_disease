@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600&display=swap');
+
+/* General Styles */
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  color: white;
+  background-image: url(mountain.svg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  overflow-x: hidden;
+}
+
+h1,
+h2 {
+  color: #4CAF50;
+
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+/* Navbar Styles */
+nav {
+  width: 100%;
+  height: 10vh;
+  position: sticky;
+}
+
+.nav-container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.logo {
+  color: white;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.logo span {
+  color: #077b32;
+  text-shadow: 0 0 10px #077b32;
+}
+
+.logo:hover {
+  animation: animate 1.5s ease-in-out infinite;
+}
+
+@keyframes animate {
+  0% {
+    scale: 1;
+  }
+
+  50% {
+    scale: 1.05;
+  }
+
+  100% {
+    scale: 1;
+  }
+}
+
+.hamburg,
+.cancel {
+  cursor: pointer;
+  position: absolute;
+  right: 15px;
+  top: 10px;
+  color: white;
+  display: none;
+  font-size: clamp(2.5rem, 0.5rem + 5vw, 3rem);
+}
+
+.nav-container .links {
+  display: flex;
+}
+
+.nav-container .links a {
+  position: relative;
+  font-size: 1.2rem;
+  color: white;
+  margin: 0 20px;
+  text-decoration: none;
+  font-weight: 550;
+  transition: 0.3s linear;
+}
+
+.nav-container .links a::before {
+  position: absolute;
+  content: "";
+  bottom: -3px;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background-color: #077b32;
+  transition: 0.2s linear;
+}
+
+
+.nav-container .links a:hover::before {
+  width: 100%;
+}
+
+.nav-container .links a:hover {
+  color: #077b32;
+}
+
+.dropdown {
+  z-index: 100;
+  position: absolute;
+  top: 0;
+  transform: translateY(-500px);
+  width: 100%;
+  height: auto;
+  backdrop-filter: blur(4px) brightness(40%);
+  box-shadow: 0 0 20px black;
+  transition: 0.2s linear;
+}
+
+.dropdown .links a {
+  display: flex;
+  color: white;
+  text-decoration: none;
+  justify-content: center;
+  padding: 15px 0;
+  align-items: center;
+  transition: 0.2s linear;
+}
+
+.dropdown .links a:hover {
+  background-color: #077b32;
+}
+
+/* Form Section Styles */
+.form-section {
+  background-color: #7b79795d;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.form-section input[type="file"] {
+  margin-top: 10px;
+  padding: 10px;
+  width: 48%;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-right: 15px;
+
+}
+
+.form-section button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 10px 20px;
+  margin-top: 10px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 50%;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.form-section button:hover {
+  background-color: #45a049;
+}
+
+/* Result Section Styles */
+.result-section,
+.new-section {
+  background-color: #7b79795d;
+  padding: 20px;
+  margin-top: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section Styles */
+.about {
+  padding: 20px;
+  background-color: #7b79795d;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* crop yield styles */
+.option {
+  padding-left: 10px;
+}
+
+input[type="text"],
+select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  width: 200px;
+  background-color: #fff;
+}
+
+input[type="text"]:focus,
+select:focus {
+  border-color: #007bff;
+  outline: none;
+}
+
+/* Contact Section Styles */
+.contact {
+  padding: 20px;
+  background-color: #7b79795d;
+  margin-top: 20px;
+  border-radius: 5px;
+}
+
+/* Basic styling for the carousel */
+.carousel {
+  position: relative;
+  width: 80%;
+  max-width: 600px;
+  margin: 40px auto;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Carousel inner wrapper */
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+/* Carousel items */
+.carousel-item {
+  min-width: 100%;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* Carousel images */
+.carousel-item img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 10px;
+}
+
+/* Caption styling */
+.caption {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  color: white;
+  font-size: 18px;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+/* /* 
+/* Footer Styles */
+.footer {
+  background-color: #4CAF50;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  margin-top: 20px;
+  vertical-align: bottom;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+.text-custom {
+  color: #4CAF50;
+}
+
+.custom-size {
+  width: 50%;
+  /* Set image width to 70% of the parent container */
+  height: 100px;
+  /* Fixed height of 400px */
+  object-fit: cover;
+  /* Ensures the image is cropped appropriately to fit within the container */
+  margin: 0 auto;
+  /* Center the image horizontally */
+}

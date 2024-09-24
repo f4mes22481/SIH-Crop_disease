@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact</title>
+  <link rel="stylesheet" href="farmstyles.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+</head>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-container">
+      <div class="logo">
+        Krop<span>Guard</span>
+      </div>
+      <div class="links">
+        <div class="link"><a href="SIH.html">Home</a></div>
+        <div class="link"><a href="SIH(about).html">About</a></div>
+
+        <div class="link"><a href="SIH(contact).html">Contact Us</a></div>
+      </div>
+      <i class="fa-solid fa-bars hamburg" onclick="hamburg()"></i>
+    </div>
+    <div class="dropdown">
+      <div class="links">
+        <a href="SIH.html">Home</a>
+        <a href="SIH(about).html">About</a>
+        <a href="SIH(contact).html">Contact Us</a>
+        <i class="fa-solid fa-xmark cancel" onclick="cancel()"></i>
+      </div>
+    </div>
+  </nav>
+
+
+  <!-- Contact Section -->
+  <section class="contact container" id="contact">
+    <h2 style="color: #4CAF50;" class="fw-bold">Contact Us</h2>
+    <div class="container">
+      <p class="text-white fw-bold">Email: support@cropdiseaseprediction.com</p>
+      <p class="text-white fw-bold">Phone: +1 234 567 890</p>
+      <p class="text-white fw-bold">For more queries, reach out to us.</p>
+      <form class="row g-3 container text-white">
+        <div class="col-md-5">
+          <label for="validationDefault01" class="form-label">First name</label>
+          <input type="text" class="form-control" id="validationDefault01" placeholder="firstname" required>
+        </div>
+        <div class="col-md-5">
+          <label for="validationDefault02" class="form-label">Last name</label>
+          <input type="text" class="form-control" id="validationDefault02" placeholder="lastname" required>
+        </div>
+        <div class="mb-3 col-md-10">
+          <label for="validationDefaultUsername" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="validationDefaultUsername" placeholder="name@example.com"
+            required>
+        </div>
+        <div class="mb-3 col-md-10">
+          <label for="exampleFormControlTextarea1" class="form-label">Example textarea</label>
+          <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" required></textarea>
+        </div>
+        <div class="col-12">
+          <button class="btn btn-success" type="submit">Submit form</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2024 Crop Disease Prediction. All rights reserved.</p>
+  </footer>
+
+  <script src="farmscript.js"></script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+</body>
+
+</html>
